@@ -1,0 +1,647 @@
+`<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <title>Wacky JS!</title>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/reveal.css" />
+        <link rel="stylesheet" href="css/theme/black.css" />
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css" />
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+
+    <body>
+        <h1>Wacky JS!</h1>
+
+        <div class="reveal">
+            <div class="slides">
+                <section data-background-color="#41997e">
+                    Wacky JS!
+
+                    <aside class="notes">
+                        <ul>
+                            <li>No notes</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background-color="#408799">
+                    Engineering and Prototyping
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Engineering into cycle</li>
+                            <li>SDLC</li>
+                            <li>Make idea into prototype</li>
+                            <li>What is a prototype?</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background-color="#409952">
+                    <p>How does JavaScript work at its core?</p>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Explain how JavaScript works.</li>
+                            <li>Make things a little less confusing about JS.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background-color="#40997e">
+                    <section>
+                        <img data-src="./lib/images/rober.jpeg" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>ex-NASA engineer Mark Rober</li>
+                                <li>proponent of developing out ideas</li>
+                                <li>Explore! Reiterate!</li>
+                                <li>Some of Rober's ideas...</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/baseball.jpeg" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Made a machine learning app with @jabrils</li>
+                                <li>Made several iterations to decode baseball signals</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/glitter-bomb-mark-rober.jpg" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Tired of packages being stolen.</li>
+                                <li>Made a glitter bomb prank for people that steal packages.</li>
+                                <li>Required several iterations to get right.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/rockskip.jpg" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Vacation with family</li>
+                                <li>taught family scientific method</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section data-background-color="#408799">
+                    <section>
+                        JavaScript Prototypes!
+                    </section>
+                    <section>
+                        JavaScript is built off of prototypes
+                        <aside class="notes">
+                            <ul>
+                                <li>Key value pairs</li>
+                                <li>Prototypes are accessible</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/basic_proto.png" />
+                        <aside class="notes">
+                            <ul>
+                                <li>Basic set of prototypes.</li>
+                                <li>Almost always found.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/Stainless-Steel-Chain.jpg" />
+                        <aside class="notes">
+                            <ul>
+                                <li>Prototype chain!</li>
+                                <li>All prototypes will be linked through a chain.</li>
+                                <li>A link has a set of methods</li>
+                                <li>Invoke a prototype through the dot notation</li>
+                                <li>The chain will be descended to access it.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            * `Object`
+                            * `Array`
+                            * `String`
+                            * `Number`
+                            * `Boolean`
+                            <aside class="notes">
+                                <ul>
+                                    <li>The other ones are also Objects, but they affect their appropriate datatype.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#409952">
+                    <section data-markdown>
+                        <textarea data-template>
+                            `Object`.
+                            <aside class="notes">
+                                <ul>
+                                    <li>This is the lowest one could go is to the </li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/Object.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>a console.dir of the Object.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        All of these methods help manipulate objects (with little "o"!).
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                Object.assign();
+                                Object.create();
+                                Object.keys();
+                            ```
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#40997e">
+                    <section>
+                        Side note!
+                    </section>
+                    <section>
+                        Did you see the prototype in the picture? Take another look.
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/protype_em.png" />
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/expanded_proto_em.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>methods off of instantiated object.</li>
+                                <li>example to follow!</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                console.log({
+                                    a: 1,
+                                    b: 2,
+                                    c: c
+                                }.hasOwnProperty(a));
+                                //logs true;
+                            ```
+                            <aside class="notes">
+                                <ul>
+                                    <li>Object literal with dot notation "hasOwnProperty".</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#408799">
+                    <section data-markdown>
+                        <textarea data-template>
+                            `Array`
+                            <aside class="notes">
+                                <ul>
+                                    <li>The base prototype to manipulate arrays.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/Array.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Note the "isArray" method!</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img data-src="./lib/images/array_proto.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Note all the methods you'd use on an array</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                new Array(0, 1, 2).forEach(num => console.log(num));
+                                // logs 
+                                // 0
+                                // 1
+                                // 2
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>This is very old but it demonstrates the point.</li>
+                                    <li>Use Array to construct a new array, and then iterate over.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#409952">
+                    <section data-markdown>
+                        <textarea data-template>
+                            `String`
+                            <aside class="notes">
+                                <ul>
+                                    <li>The base prototype to manipulate strings.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section>
+                        <img data-src="./lib/images/String.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Prototype methods for String</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                new String("Hello world").toUpperCase();
+                                // "HELLO WORLD"
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>This is very old but it demonstrates the point.</li>
+                                    <li>Use String to construct a new string, and then all caps.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#40997e">
+                    <section data-markdown>
+                        <textarea data-template>
+                            `Number`
+                            <aside class="notes">
+                                <ul>
+                                    <li>The base prototype to manipulate numbers.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section>
+                        <img data-src="./lib/images/Number.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Prototype methods for Number</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                new Number(189.22234).toFixed(2);
+                                // "189.22"
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>This is very old but it demonstrates the point.</li>
+                                    <li>Use Number to make a new number, then remove up to the second decimal spot.</li>
+                                    <li>Outputs a string number.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#408799">
+                    <section data-markdown>
+                        <textarea data-template>
+                            `Boolean`
+                            <aside class="notes">
+                                <ul>
+                                    <li>The base prototype to manipulate booleans.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section>
+                        <img data-src="./lib/images/Boolean.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Prototype methods for Boolean</li>
+                                <li>Not really manipulate booleans, seeing as there hardly are any prototypes.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                new Boolean(true).toString();
+                                // "true"
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>This is very old but it demonstrates the point.</li>
+                                    <li>Since there are no Boolean prototype methods, just use the base prototype toString to demonstrate it.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#409952">
+                    <section>
+                        Note!
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                                `new {Object, Array, String, Number, Boolean}({value}).{prototype}({value});`
+
+                                <aside class="notes">
+                                    <ul>
+                                        <li>Using the new keyword to construct JS prototypes is a very old method!</li>
+                                        <li>Just use the primitive values themselves.</li>
+                                    </ul>
+                                </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                                ```js
+                                    {
+                                        a: 1,
+                                        b: 2,
+                                        c: 3
+                                    }.hasOwnProperty(a);
+                                    // true;
+
+                                    [0, 1, 2].forEach(num => console.log(nul));
+                                    // 0
+                                    // 1
+                                    // 2
+
+                                    "alluppercase".toUpperCase();
+                                    // ALLUPPERCASE
+
+                                    (189.22234).toFixed(2);
+                                    // "189.22"
+
+                                    true.toString();
+                                    // "true"
+                                ```
+
+                                <aside class="notes">
+                                    <ul>
+                                        <li>Here are the equivalent method examples</li>
+                                        <li>Attaching a prototype to the primitive values will just cause them to be coerced to the Object values instead of primitive.</li>
+                                    </ul>
+                                </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#40997e">
+                    <section>
+                        Caution!
+                    </section>
+
+                    <section>
+                        Global Prototypes
+
+                        <aside class="notes">
+                            <ul>
+                                <li>I have shown global prototypes</li>
+                                <li>They can be overwritten.</li>
+                                <li>Affect code</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section data-background-color="#408799">
+                    <section>
+                        Constructors and Prototypes
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Function Constructor</li>
+                                <li>Make new object with prototypes.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                            function SomeNewObject() {
+                                this.world = "world";
+                            }
+                            
+                            SomeNewObject.prototype.helloWorld = function () {
+                                console.log("Hello" + this.world)
+                            }
+                            
+                            const newObject = new SomeNewObject();
+                            
+                            newObject.helloWorld();
+
+                            // "Helloworld"
+                            ```
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#409952">
+                    <section>
+                        "this" craft
+                    </section>
+
+                    <section>
+                        <img data-src="./lib/images/thischildparent.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>"this" is a global keyword</li>
+                                <li>access prototypes from parent object.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                () => {};
+
+                                {value}.apply();
+
+                                {value}.call();
+
+                                {value}.bind();
+
+                                function name() {}
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>you can change what "this" points to.</li>
+                                    <li>only function key signature as changes "this" from the parent object.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section data-background-color="#40997e">
+                    <section>
+                        Prototypal Inheritance
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                function foo(){}
+
+                                foo.prototype.foo_prop = function() {
+                                    console.log("foo val");
+                                }
+                                
+                                const proto = new foo;
+                                
+                                /*
+                                The previous could also be done like this...
+                                const proto = Object.create(foo.prototype);
+                                */
+                                
+                                function bar(){}
+                                
+                                bar.prototype = proto;
+                                
+                                proto.bar_prop = function() {
+                                    console.log("bar val");
+                                }
+                                
+                                var inst = new bar;
+                                
+                                inst.foo_prop()
+                                inst.bar_prop()
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>Prototypal Inheritance!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                obj = {
+                                    a: 2,
+                                    b: () => {console.log(obj)},
+                                    c: function() {console.log(this)}
+                                }
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>you can change use regular objects, just be aware of "this" keyword binding.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+                </section>
+
+                <section>
+                    Code already!
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                        ## Sources
+
+                        * [Prototypes. MDN.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)
+                        * [Object.keys()]([keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys))
+                        * [Object.create()]([keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create))
+                        * [Object.assign()]([keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign))
+                    </textarea>
+                </section>
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                // controls: false,
+                hash: true,
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true }
+                ],
+                markdown: {
+                    smartypants: true
+                }
+            });
+        </script>
+    </body>
+</html>
