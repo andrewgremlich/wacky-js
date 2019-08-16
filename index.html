@@ -272,6 +272,67 @@
                 <section data-background-color="#d1d345">
                     <section>
                         Type Coercion
+
+                        <aside class="notes">
+                            <ul>
+                                <li>List of stuff with type coercion scenarios.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                typeof "Hello World";
+                                typeof new String("Hello World");
+                                typeof "Hello World".split(" ");
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>New converts into object</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                ! + [];
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>+ [] unary operator to make the value a number</li>
+                                    <li>Break it down to !0.</li>
+                                    <li>Arrays to numbers and such!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                [] + [];
+                                ["b", ["c"]] + ["a"];
+
+                                "1" + 2;
+
+                                (![] + []);
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>Empty string.</li>
+                                    <li>With two arrays it concatenates the contents.</li>
+                                    <li>Unary arrays to numbers, and concatentate to strings.</li>
+                                    <li>last example break down easy.</li>
+                                    <li>No errors thrown!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
                     </section>
                 </section>
 
@@ -279,11 +340,140 @@
                     <section>
                         Truthy vs. true vs. false
                     </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                {};
+                                [];
+                                42;
+                                "0";
+                                "false";
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>Booleans are not the only true and false thing.</li>
+                                    <li>Every value has boolean</li>
+                                    <li>All will evaluate to true.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                if (42) {
+                                    console.log("This is true");
+                                }
+
+                                if (42 == "42") {
+                                    console.log("numbers and strings are equal?");
+                                }
+                                
+                                if (undefined == null) {
+                                    console.log("Both are falsey values so they are the same");
+                                }
+
+                                if (0) {
+                                    console.log("this is a good value right?")
+                                }
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>Soft equality operators!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
                 </section>
 
                 <section data-background-color="#d38f45">
                     <section>
-                        "this" 
+                        "this"
+                    </section>
+
+                    <section>
+                        Points to parent object. That binding may change!
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                console.log(this);
+
+                                function a() { 
+                                    console.log(this);
+                                }
+                                a();
+
+                                function A() { 
+                                    console.log(this);
+                                }
+                                const a = new A();
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>The new keyword makes an object out of a function constructor.</li>
+                                    <li>Only function signature does this!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                const obj = {
+                                    a: function() { console.log(this) },
+                                    b: () => console.log(this) 
+                                }
+                                
+                                obj.a()    
+                                obj.b()
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>arrow function act differently than the normal function key signature.</li>
+                                    <li>arrow parent object is primarily Window.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                const globals = {
+                                    a: 1,
+                                    b: 2
+                                }
+                                
+                                function A() {
+                                        console.log(this.a + this.b);
+                                }
+                                
+                                const a = new A();
+                                
+                                A.call(globals);
+                                
+                                A.apply(globals);
+                                
+                                const bounded = A.bind(globals);
+                                bounded();
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>call and apply do the exact same thing, one is comma delimited and the other is array delimited.</li>
+                                    <li>I hope this makes it better!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
                     </section>
                 </section>
 
@@ -291,17 +481,135 @@
                     <section>
                         JS DOM Events
                     </section>
+
+                    <section>
+                        <a href="https://codepen.io/andrewgremlich/pen/zJjddB?editors=1011" target="_blank"
+                            >A codepen!</a
+                        >
+                    </section>
+
+                    <section>
+                        <p
+                            class="codepen"
+                            data-height="265"
+                            data-theme-id="dark"
+                            data-default-tab="js,result"
+                            data-user="andrewgremlich"
+                            data-slug-hash="zJjddB"
+                            data-preview="true"
+                            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                            data-pen-title="Events"
+                        >
+                            <span
+                                >See the Pen <a href="https://codepen.io/andrewgremlich/pen/zJjddB/"> Events</a> by
+                                Andrew Gremlich (<a href="https://codepen.io/andrewgremlich">@andrewgremlich</a>) on
+                                <a href="https://codepen.io">CodePen</a>.</span
+                            >
+                        </p>
+                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    </section>
                 </section>
 
                 <section data-background-color="#d34845">
                     <section>
                         Event Loop
                     </section>
+
+                    <section>
+                        <img data-src="./lib/images/eventloop.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Single thread blocking event loop based.</li>
+                                <li>"Event Loop" handles and processes commands</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                setTimeout(() => {
+                                    console.log("timeout invoke.")
+                                })
+                                
+                                const nextInvoke = (() => {
+                                    console.log("Next Invoke");
+                                })();
+                                
+                                const nextInvoke1 = (() => {
+                                    console.log("Next Invoke 1");
+                                })();
+                                
+                                
+                                const nextInvoke2 = (() => {
+                                    console.log("Next Invoke 2");
+                                })();
+                                
+                                const nextInvoke3 = (() => {
+                                    console.log("Next Invoke 3");
+                                })();
+                            ```
+    
+                            <aside class="notes">
+                                <ul>
+                                    <li>setTimeout is OS operated</li>
+                                    <li>functions are JS operated and have priority.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section>
+                        https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+                    </section>
                 </section>
 
                 <section data-background-color="#d38f45">
                     <section>
                         Extra: Floating Point Number additions!
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                1.01 + 2.01;
+                            ```
+    
+                            <aside class="notes">
+                                <ul>
+                                    <li>Computer stores decimals in a weird way.</li>
+                                    <li>it deals with f64 stuff.  JS default f64.</li>
+                                    <li>It's all computer science stuff.</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```rust
+                                fn main() {
+                                    let a: f64 = 1.01;
+                                    let b: f64 = 2.01;
+                                    let absum: f64 = a + b;
+                                
+                                    let c: f32 = 1.01;
+                                    let d: f32 = 2.01;
+                                    let cdsum: f32 = c + d;
+                                
+                                    println!("{:?}", absum);
+                                    println!("{:?}", cdsum);
+                                }
+                            ```
+    
+                            <aside class="notes">
+                                <ul>
+                                    <li>To demonstrate so that I'm not crazy.</li>
+                                    <li>Be careful with precision math!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
                     </section>
                 </section>
 
@@ -321,6 +629,7 @@
                         <li>https://auth0.com/blog/a-brief-history-of-javascript/</li>
                         <li>https://en.wikipedia.org/wiki/ECMAScript</li>
                         <li>https://developer.mozilla.org/en-US/docs/Glossary/Truthy</li>
+                        <li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop</li>
                     </ul>
                 </section>
             </div>
