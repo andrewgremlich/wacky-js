@@ -180,7 +180,7 @@
                             <ul>
                                 <li>Netscape hired Brendan Eich to embed a Scheme language into Navigator.</li>
                                 <li>Eich saw the advantage of a dynamic language.</li>
-                                <li>Instead of Scheme, he made Mocha in 10 days.</li>
+                                <li>Instead of embeding a Scheme, he made Mocha in 10 days.</li>
                                 <li>Mocha drew syntax inspiration from Java.</li>
                                 <li>Mocha was accepted and later named LiveScript</li>
                             </ul>
@@ -196,7 +196,7 @@
                                     Several months later LiveScript renamed to JavaScript.
                                     <ul>
                                         <li>Attract Java Developers.</li>
-                                        <li>No similarities to Java.</li>
+                                        <li>No internal similarities to Java.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -211,15 +211,16 @@
                                 <li>Microsoft also wanted a language for the web.</li>
                                 <li>They made JScript for IE.</li>
                                 <li>
-                                    ECMAScript was established and Microsoft would further diverge from the standard
-                                    among versions.
+                                    ECMAScript International was established and Microsoft would further diverge from
+                                    the standard among versions.
                                 </li>
+                                <li>Microsoft took browser share from Netscape and dictated how web went.</li>
                             </ul>
                         </aside>
                     </section>
 
                     <section>
-                        ECMAScript Version History.
+                        ECMAScript Version Tumultuous History.
 
                         <aside class="notes">
                             <ul>
@@ -230,14 +231,22 @@
                                         <li>Reps from Yahoo and Microsoft expressed concerns for complex language.</li>
                                         <li>ES4 was blocked. ES3.1 had minor upgrades.</li>
                                         <li>ES4 features would come later in ES6.</li>
-                                        <li>Adobe picked up ES4 in ActionScript in Adobe Flash.</li>
-                                        <li>Adobe could never drive ES features.</li>
                                     </ul>
                                 </li>
-                                <li>Microsoft took browser share from Netscape and dictated how web went.</li>
                                 <li>Standarization wasn't prevalent.</li>
                                 <li>Different JS programs to support different browsers.</li>
                                 <li>ES3.1 was continually worked on, and eventually renamed to ES5 by 2009.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <img data-src="./lib/images/adobe-flash-player.jpg " />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Adobe picked up ES4 in ActionScript in Adobe Flash.</li>
+                                <li>Adobe could never drive ES features.</li>
                             </ul>
                         </aside>
                     </section>
@@ -253,7 +262,7 @@
                                 <li>Chrome and Firefox picked up Microsoft slack with IE. They took users from IE.</li>
                                 <li>Chrome and Firefox had more of a say in Web Standards than Microsoft.</li>
                                 <li>ES6 released in 2015 (hello es4!)</li>
-                                <li>A release every year afterwards.</li>
+                                <li>An ES release every year afterwards.  Not as big as ES6 though.</li>
                             </ul>
                         </aside>
                     </section>
@@ -291,6 +300,7 @@
                             <aside class="notes">
                                 <ul>
                                     <li>New converts into object</li>
+                                    <li>prototypes will convert it.</li>
                                 </ul>
                             </aside>
                         </textarea>
@@ -315,6 +325,14 @@
                     <section data-markdown>
                         <textarea data-template>
                             ```js
+                                (!([])   
+                            ```
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
                                 [] + [];
                                 ["b", ["c"]] + ["a"];
 
@@ -325,6 +343,7 @@
 
                             <aside class="notes">
                                 <ul>
+                                    <li>NOTE demonstrate the code!</li>
                                     <li>Empty string.</li>
                                     <li>With two arrays it concatenates the contents.</li>
                                     <li>Unary arrays to numbers, and concatentate to strings.</li>
@@ -349,6 +368,10 @@
                                 42;
                                 "0";
                                 "false";
+
+                                if (42 || {} || [] || 42 || "0" || "false") {
+                                    console.log("This is true");
+                                }
                             ```
 
                             <aside class="notes">
@@ -384,6 +407,30 @@
                             <aside class="notes">
                                 <ul>
                                     <li>Soft equality operators!</li>
+                                </ul>
+                            </aside>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                0;
+                                null;
+                                undefined;
+                                "";
+                                NaN;
+                                
+                                if (0 || null || undefined || "" || NaN) {
+                                    console.log("any truth here?");
+                                } else {
+                                    console.log("Falsey Values!");
+                                }
+                            ```
+
+                            <aside class="notes">
+                                <ul>
+                                    <li>There are falsey values!</li>
                                 </ul>
                             </aside>
                         </textarea>
@@ -439,7 +486,7 @@
                             <aside class="notes">
                                 <ul>
                                     <li>arrow function act differently than the normal function key signature.</li>
-                                    <li>arrow parent object is primarily Window.</li>
+                                    <li>arrow parent object is primarily Window always.</li>
                                 </ul>
                             </aside>
                         </textarea>
@@ -454,7 +501,7 @@
                                 }
                                 
                                 function A() {
-                                        console.log(this.a + this.b);
+                                    console.log(this.a + this.b);
                                 }
                                 
                                 const a = new A();
@@ -471,6 +518,7 @@
                                 <ul>
                                     <li>call and apply do the exact same thing, one is comma delimited and the other is array delimited.</li>
                                     <li>I hope this makes it better!</li>
+                                    <li>Explain code!</li>
                                 </ul>
                             </aside>
                         </textarea>
@@ -508,6 +556,13 @@
                         </p>
                         <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                     </section>
+
+                    <section>
+                        <p>Capture</p>
+                        <p>Bubbling</p>
+                        <p>Target</p>
+                        <p>Current Target</p>
+                    </section>
                 </section>
 
                 <section data-background-color="#d34845">
@@ -529,26 +584,15 @@
                     <section data-markdown>
                         <textarea data-template>
                             ```js
-                                setTimeout(() => {
-                                    console.log("timeout invoke.")
-                                })
+                                setTimeout(() => console.log("timeout invoke."));
+
+                                (() => console.log("Next Invoke"))();
                                 
-                                const nextInvoke = (() => {
-                                    console.log("Next Invoke");
-                                })();
+                                (() => console.log("Next Invoke 1"))();
                                 
-                                const nextInvoke1 = (() => {
-                                    console.log("Next Invoke 1");
-                                })();
+                                (() => console.log("Next Invoke 2"))();
                                 
-                                
-                                const nextInvoke2 = (() => {
-                                    console.log("Next Invoke 2");
-                                })();
-                                
-                                const nextInvoke3 = (() => {
-                                    console.log("Next Invoke 3");
-                                })();
+                                (() => console.log("Next Invoke 3"))();
                             ```
     
                             <aside class="notes">
@@ -607,6 +651,7 @@
                                 <ul>
                                     <li>To demonstrate so that I'm not crazy.</li>
                                     <li>Be careful with precision math!</li>
+                                    <li>use significant figures for precision math.</li>
                                 </ul>
                             </aside>
                         </textarea>
@@ -616,7 +661,7 @@
                 <section data-background-color="#d1d345">
                     <section>
                         Well Done!
-    
+
                         <aside class="notes">
                             <ul>
                                 <li>There is still so much to learn and practice!</li>
@@ -626,7 +671,7 @@
 
                     <section>
                         <img data-src="./lib/images/tenor.gif" />
-    
+
                         <aside class="notes">
                             <ul>
                                 <li>You might have headache</li>
@@ -636,7 +681,7 @@
 
                     <section>
                         <img data-src="./lib/images/kids.jpg" />
-    
+
                         <aside class="notes">
                             <ul>
                                 <li>And JavaScript won't mess up your code!</li>
