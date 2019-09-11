@@ -479,7 +479,7 @@
                                 function A() { 
                                     console.log(this);
                                 }
-                                const a = new A();
+                                const objA = new A();
                             ```
 
                             <aside class="notes">
@@ -520,17 +520,17 @@
                                     b: 2
                                 }
                                 
-                                function A() {
+                                function B() {
                                     console.log(this.a + this.b);
                                 }
                                 
-                                const a = new A();
+                                const objB = new B();
                                 
-                                A.call(globals);
+                                B.call(globals);
                                 
-                                A.apply(globals);
+                                B.apply(globals);
                                 
-                                const bounded = A.bind(globals);
+                                const bounded = B.bind(globals);
                                 bounded();
                             ```
 
