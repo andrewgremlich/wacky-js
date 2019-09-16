@@ -41,7 +41,6 @@
                         <h3>Who am I?</h3>
                         <p>Graduated BYU-Idaho December 2016</p>
                         <p>Major was Web Design and Development</p>
-                        <p>First job GM in Austin Texas</p>
                         <p>I enjoy hikes, games, and books!</p>
                     </section>
 
@@ -150,15 +149,11 @@
 
                 <section data-background-color="#d34845">
                     <section>
-                        What's what
+                        JS is weird
+                    </section>
 
-                        <aside class="notes">
-                            <ul>
-                                <li>JS is weird and maybe frustrating</li>
-                                <li>Feel like kronk?</li>
-                                <li>Explain nature of JS for familiarity. Be better!</li>
-                            </ul>
-                        </aside>
+                    <section>
+                        Feel like kronk?
                     </section>
 
                     <section>
@@ -229,7 +224,7 @@
                         <aside class="notes">
                             <ul>
                                 <li>Microsoft also wanted a language for the web.</li>
-                                <li>They made JScript for IE.</li>
+                                <li>They made JScript for IE.  It was a fork of JavaScript.</li>
                                 <li>
                                     ECMAScript International was established and Microsoft would further diverge from
                                     the standard among versions.
@@ -336,16 +331,19 @@
                                 <ul>
                                     <li>+ [] unary operator to make the value a number</li>
                                     <li>Break it down to !0.</li>
-                                    <li>Arrays to numbers and such!</li>
                                 </ul>
                             </aside>
                         </textarea>
                     </section>
 
+                    <section>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Order Precedence</a>
+                    </section>
+
                     <section data-markdown>
                         <textarea data-template>
                             ```js
-                                (!([]))   
+                                (!(+([])));   
                             ```
                         </textarea>
                     </section>
@@ -363,15 +361,16 @@
 
                             <aside class="notes">
                                 <ul>
-                                    <li>NOTE demonstrate the code!</li>
-                                    <li>Empty string.</li>
                                     <li>With two arrays it concatenates the contents.</li>
                                     <li>Unary arrays to numbers, and concatentate to strings.</li>
-                                    <li>last example break down easy.</li>
                                     <li>No errors thrown!</li>
                                 </ul>
                             </aside>
                         </textarea>
+                    </section>
+
+                    <section>
+                        JS Data Coercion: Not straight forward.
                     </section>
                 </section>
 
@@ -521,10 +520,8 @@
                                 }
                                 
                                 function B() {
-                                    console.log(this.a + this.b);
+                                    console.log(this, this.a + this.b);
                                 }
-                                
-                                const objB = new B();
                                 
                                 B.call(globals);
                                 
@@ -686,6 +683,39 @@
 
                     <section>
                         https://softwareengineering.stackexchange.com/a/215126
+                    </section>
+                </section>
+
+                <section data-background-color="#d34845">
+                    <section>
+                        Challenge Round!
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                const globals = {
+                                    zero: 0,
+                                    one: 1
+                                }
+
+                                function main() {
+                                    let zero = 0;
+                                    let one = "" + ++zero + !!"hello".length + [" ", "world"];
+                                    
+                                    let clearUp = one.replace(",", "");
+
+                                    if (this.zero && one) {
+                                    console.log(clearUp);
+                                    } else {
+                                    console.log(clearUp);
+                                    }
+                                };
+
+                                const saying = main.bind(globals)
+                                saying();
+                            ````
+                        </textarea>
                     </section>
                 </section>
 
