@@ -35,7 +35,7 @@
     "load-grunt-tasks": "^5.1.0",
     "mustache": "^3.0.2",
     "node-sass": "^4.14.1",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.4.0"
   },
   "license": "MIT",
   "dependencies": {}
