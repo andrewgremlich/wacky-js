@@ -1,40 +1,825 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-color="#d38f45">
+          Wacky JS!
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+          <aside class="notes">
+            <ul>
+              <li>No notes</li>
+            </ul>
+          </aside>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section data-background-color="#d38f45">
+          <section>
+            <h3>Who am I?</h3>
+            <p>Graduated BYU-Idaho December 2016</p>
+            <p>Major was Web Design and Development</p>
+            <p>I enjoy hikes, games, and books!</p>
+            <p>Do projects without using any library help. Learn some more!</p>
+          </section>
+        </section>
+
+        <section data-background-color="#d1d345">
+          <section>
+            <img data-src="media/kronk.jpeg" />
+
+            <aside class="notes">
+              <ul>
+                <li>Kronk and coding?</li>
+                <li>Here are some sensations.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>Let me explain.</section>
+        </section>
+
+        <section data-background-color="#d34845">
+          <section>
+            Kronk Sensation One: Confused
+
+            <aside class="notes">
+              <ul>
+                <li>Pretend you're Kronk and JS are shoulder angels</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/VnMGCUH-lLY"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+
+          <section>
+            <img data-src="media/point.jpeg" />
+          </section>
+        </section>
+
+        <section data-background-color="#d38f45">
+          <section>
+            Kronk Sensation Two: More Confused
+
+            <aside class="notes">
+              <ul>
+                <li>Kronk presenting how to fix a bug. Esma is dev leader.</li>
+                <li>
+                  Development is the entire journey and something happens.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/t23YSJzMEpg"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+
+          <section>
+            <img data-src="media/sense.gif" />
+          </section>
+        </section>
+
+        <section data-background-color="#d1d345">
+          <section>
+            Kronk Sensation Three: Powerful!
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Your coworker presents you with a new web front end framework.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/b3c1RORu_Bs"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+
+          <section>
+            <img data-src="media/feelpower.gif" />
+          </section>
+        </section>
+
+        <section data-background-color="#d34845">
+          <section>JS is weird</section>
+
+          <section>Feel like kronk?</section>
+
+          <section>Before I go on...</section>
+        </section>
+
+        <section data-background-color="#d38f45">
+          <section>JavaScript History</section>
+
+          <section>
+            <img data-src="media/netscape.png" />
+
+            <aside class="notes">
+              <ul>
+                <li>Netscape was the internet company of the 90's.</li>
+                <li>Netscape wanted interactivity and dynamic.</li>
+                <li>Netscape evaluated languages for web.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img style="width: 200px" data-src="media/java.png" />
+
+            <aside class="notes">
+              <ul>
+                <li>Java was considered with applets.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/brendaneich.jpeg" />
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Netscape hired Brendan Eich to embed a Scheme language into
+                  Navigator.
+                </li>
+                <li>Eich saw the advantage of a dynamic language.</li>
+                <li>Instead of embeding a Scheme, he made Mocha in 10 days.</li>
+                <li>Mocha drew syntax inspiration from Java.</li>
+                <li>Mocha was accepted and later named LiveScript</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/js.png" />
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Several months later LiveScript renamed to JavaScript.
+                  <ul>
+                    <li>Attract Java Developers.</li>
+                    <li>No internal similarities to Java.</li>
+                  </ul>
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/mslogo.jpeg" />
+
+            <aside class="notes">
+              <ul>
+                <li>Microsoft also wanted a language for the web.</li>
+                <li>They made JScript for IE. It was a fork of JavaScript.</li>
+                <li>
+                  ECMAScript International was established and Microsoft would
+                  further diverge from the standard among versions.
+                </li>
+                <li>
+                  Microsoft took browser share from Netscape and dictated how
+                  web went.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            ECMAScript Version Tumultuous History.
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  ES4
+                  <ul>
+                    <li>so many new features</li>
+                    <li>
+                      Reps from Yahoo and Microsoft expressed concerns for
+                      complex language.
+                    </li>
+                    <li>ES4 was blocked. ES3.1 had minor upgrades.</li>
+                    <li>ES4 features would come later in ES6.</li>
+                  </ul>
+                </li>
+                <li>Standarization wasn't prevalent.</li>
+                <li>Different JS programs to support different browsers.</li>
+                <li>
+                  ES3.1 was continually worked on, and eventually renamed to ES5
+                  by 2009.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/adobe-flash-player.jpeg " />
+
+            <aside class="notes">
+              <ul>
+                <li>Adobe picked up ES4 in ActionScript in Adobe Flash.</li>
+                <li>Adobe could never drive ES features.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/firefox-on-chrome.png" />
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Around the same time of 2009, Google Chrome and Firefox
+                  started to gain traction.
+                </li>
+                <li>
+                  Chrome and Firefox picked up Microsoft slack with IE. They
+                  took users from IE.
+                </li>
+                <li>
+                  Chrome and Firefox had more of a say in Web Standards than
+                  Microsoft.
+                </li>
+                <li>ES6 released in 2015 (hello es4!)</li>
+                <li>
+                  An ES release every year afterwards. Not as big as ES6 though.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            Now to the wacky stuff.
+
+            <aside class="notes">
+              <ul>
+                <li>
+                  Due to the conflict and nature of JS, there are some weird
+                  stuff.
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section data-background-color="#d1d345">
+          <section>
+            Type Coercion
+
+            <aside class="notes">
+              <ul>
+                <li>List of stuff with type coercion scenarios.</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											typeof "Hello World";
+											typeof new String("Hello World");
+											typeof "Hello World".split(" ");
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>New converts into object</li>
+													<li>prototypes will convert it.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											! + [];
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>+ [] unary operator to make the value a number</li>
+													<li>Break it down to !0.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence"
+              >Order Precedence</a
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											(!(+([])));   
+									```
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											[] + [];
+											["b", ["c"]] + ["a"];
+
+											"1" + 2;
+
+											(![] + []);
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>With two arrays it concatenates the contents.</li>
+													<li>Unary arrays to numbers, and concatentate to strings.</li>
+													<li>No errors thrown!</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section>JS Data Coercion: Not straight forward.</section>
+        </section>
+
+        <section data-background-color="#d34845">
+          <section>Truthy vs. true vs. false</section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											{};
+											[];
+											42;
+											"0";
+											"false";
+
+											if (42 || {} || [] || 42 || "0" || "false") {
+													console.log("This is true");
+											}
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>Booleans are not the only true and false thing.</li>
+													<li>Every value has boolean</li>
+													<li>All will evaluate to true.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											if (42) {
+													console.log("This is true");
+											}
+
+											if (42 == "42") {
+													console.log("numbers and strings are equal?");
+											}
+											
+											if (undefined == null) {
+													console.log("Both are falsey values so they are the same");
+											}
+
+											if (0) {
+													console.log("this is a good value right?")
+											}
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>Soft equality operators!</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											0;
+											null;
+											undefined;
+											"";
+											NaN;
+											
+											if (0 || null || undefined || "" || NaN) {
+													console.log("any truth here?");
+											} else {
+													console.log("Falsey Values!");
+											}
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>There are falsey values!</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+        </section>
+
+        <section data-background-color="#d38f45">
+          <section>"this"</section>
+
+          <section>Points to parent object. That binding may change!</section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											console.log(this);
+
+											function a() { 
+													console.log(this);
+											}
+											a();
+
+											function A() { 
+													console.log(this);
+											}
+											const objA = new A();
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>The new keyword makes an object out of a function constructor.</li>
+													<li>Only function signature does this!</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											const obj = {
+													a: function() { console.log(this) },
+													b: () => console.log(this) 
+											}
+											
+											obj.a()    
+											obj.b()
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>arrow function act differently than the normal function key signature.</li>
+													<li>arrow parent object is primarily Window always.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											const globals = {
+													a: 1,
+													b: 2
+											}
+											
+											function B() {
+													console.log(this, this.a + this.b);
+											}
+											
+											B.call(globals);
+											
+											B.apply(globals);
+											
+											const bounded = B.bind(globals);
+											bounded();
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>call and apply do the exact same thing, one is comma delimited and the other is array delimited.</li>
+													<li>I hope this makes it better!</li>
+													<li>Explain code!</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+        </section>
+
+        <section data-background-color="#d1d345">
+          <section>JS DOM Events</section>
+
+          <section>
+            <a
+              href="https://codepen.io/andrewgremlich/pen/zJjddB?editors=1011"
+              target="_blank"
+              >A codepen!</a
+            >
+          </section>
+
+          <section>
+            <p
+              class="codepen"
+              data-height="265"
+              data-theme-id="dark"
+              data-default-tab="js,result"
+              data-user="andrewgremlich"
+              data-slug-hash="zJjddB"
+              data-preview="true"
+              style="
+                height: 265px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid;
+                margin: 1em 0;
+                padding: 1em;
+              "
+              data-pen-title="Events"
+            >
+              <span
+                >See the Pen
+                <a href="https://codepen.io/andrewgremlich/pen/zJjddB/">
+                  Events</a
+                >
+                by Andrew Gremlich (<a href="https://codepen.io/andrewgremlich"
+                  >@andrewgremlich</a
+                >) on <a href="https://codepen.io">CodePen</a>.</span
+              >
+            </p>
+            <script
+              async
+              src="https://static.codepen.io/assets/embed/ei.js"
+            ></script>
+          </section>
+
+          <section>
+            <p>Capture</p>
+            <p>Bubbling</p>
+            <p>Target</p>
+            <p>Current Target</p>
+          </section>
+        </section>
+
+        <section data-background-color="#d34845">
+          <section>Event Loop</section>
+
+          <section>
+            <img data-src="media/eventloop.png" />
+
+            <aside class="notes">
+              <ul>
+                <li>Single thread blocking event loop based.</li>
+                <li>"Event Loop" handles and processes commands</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											setTimeout(() => console.log("timeout invoke."));
+
+											(() => console.log("Next Invoke"))();
+											
+											(() => console.log("Next Invoke 1"))();
+											
+											(() => console.log("Next Invoke 2"))();
+											
+											(() => console.log("Next Invoke 3"))();
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>setTimeout is OS operated</li>
+													<li>functions are JS operated and have priority.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section>
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+          </section>
+        </section>
+
+        <section data-background-color="#d38f45">
+          <section>Extra: Floating Point Number additions!</section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											1.01 + 2.01;
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>Computer stores decimals in a weird way.</li>
+													<li>it deals with f64 stuff.  JS default f64.</li>
+													<li>It's all computer science stuff.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```rust
+											fn main() {
+													let a: f64 = 1.01;
+													let b: f64 = 2.01;
+													let absum: f64 = a + b;
+											
+													let c: f32 = 1.01;
+													let d: f32 = 2.01;
+													let cdsum: f32 = c + d;
+											
+													println!("{:?}", absum);
+													println!("{:?}", cdsum);
+											}
+									```
+
+									<aside class="notes">
+											<ul>
+													<li>https://play.rust-lang.org/</li>
+													<li>To demonstrate so that I'm not crazy.</li>
+													<li>Be careful with precision math!</li>
+													<li>use significant figures for precision math.</li>
+											</ul>
+									</aside>
+							</textarea
+            >
+          </section>
+
+          <section>
+            <p>This is a computer science thing.</p>
+            <p>The decimal is converted to base 2 equivalent.</p>
+            <p>
+              Simply put, the computer stores the sign (+, -), fixed-precision
+              number, and the exponent.
+            </p>
+          </section>
+
+          <section>
+            https://softwareengineering.stackexchange.com/a/215126
+          </section>
+        </section>
+
+        <section data-background-color="#d34845">
+          <section>Challenge Round!</section>
+
+          <section data-markdown>
+            <textarea data-template>
+									```js
+											const globals = {
+													zero: 0,
+													one: 1
+											}
+
+											function main() {
+													let zero = 0;
+													let one = "" + ++zero + !!"hello".length + [" ", "world"];
+													
+													let clearUp = one.replace(",", "");
+
+													if (this.zero && one) {
+													console.log(clearUp);
+													} else {
+													console.log(clearUp);
+													}
+											};
+
+											const saying = main.bind(globals)
+											saying();
+									````
+							</textarea
+            >
+          </section>
+        </section>
+
+        <section data-background-color="#d1d345">
+          <section>
+            Well Done!
+
+            <aside class="notes">
+              <ul>
+                <li>There is still so much to learn and practice!</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/tenor.gif" />
+
+            <aside class="notes">
+              <ul>
+                <li>You might have headache</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="media/kids.jpeg" />
+
+            <aside class="notes">
+              <ul>
+                <li>And JavaScript won't mess up your code!</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <p>Sources</p>
+          <ul>
+            <li>
+              https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+            </li>
+            <li>
+              https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+            </li>
+            <li>
+              https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+            </li>
+            <li>https://en.wikipedia.org/wiki/JavaScript</li>
+            <li>https://auth0.com/blog/a-brief-history-of-javascript/</li>
+            <li>https://en.wikipedia.org/wiki/ECMAScript</li>
+            <li>https://developer.mozilla.org/en-US/docs/Glossary/Truthy</li>
+            <li>
+              https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
